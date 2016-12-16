@@ -17,8 +17,8 @@
   },
   "license": "MIT",
   "repository": {
-    "git":"https://github.com/paulSambolin/serverless-enable-api-logs"
+    "git": "https://github.com/paulSambolin/serverless-enable-api-logs"
   },
   "name": "serverless-enable-api-logs",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
