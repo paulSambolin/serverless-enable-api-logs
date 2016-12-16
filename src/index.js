@@ -60,6 +60,7 @@ module.exports = Class.extend({
       if (template.Resources[key]['Type'] == 'AWS::ApiGateway::Deployment') {
         delete template.Resources[key].Properties.StageName;
 
+        template.Resources[key]['DependsOn'] = 'ApiGatewayStage';
         // add stage config
         stageConfig.Properties.DeploymentId = {"Ref":key}
         if (template.Resources.ApiGatewayStage) {
