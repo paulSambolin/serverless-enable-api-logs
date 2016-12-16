@@ -2,7 +2,7 @@
   "author": {
     "name": "Paul Sambolin"
   },
-  "description": "Plugin for the SLS 1.x that adds enables logging for apigateway events",
+  "description": "Plugin for the SLS 1.x that enables logging for all API Gateway events",
   "main": "src/index.js",
   "maintainers": [
     {
