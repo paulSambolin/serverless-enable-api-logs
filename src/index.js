@@ -18,12 +18,13 @@ module.exports = Class.extend({
     const template = this._serverless.service.provider.compiledCloudFormationTemplate;
 
     // setup variables, if any are defined
-    /*
+    
     var variables = {};
+
     if (this._serverless.service.custom.stageVariables) {
       variables = this._serverless.service.custom.stageVariables;
     }
-*/
+
 
     // find the correct stage name
     var stage = this._serverless.service.defaults.stage;
@@ -51,9 +52,12 @@ module.exports = Class.extend({
           LoggingLevel: "INFO",
           ResourcePath: "/*",
           MetricsEnabled: true
-        }]
+        }],
+        Variables: variables
       }
     }
+
+    console.log(JSON.stringify(variables));
 
     // find the deployment resource, and add the stage resource
     Object.keys(template.Resources).forEach(function(key){
