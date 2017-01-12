@@ -1,18 +1,23 @@
 # serverless-enable-api-logs
 Enables Coudwatch logging for API Gateway events
 
+-# Resources
+-- [Github](https://github.com/paulSambolin/serverless-enable-api-logs)
+-- [NPM](https://www.npmjs.com/package/serverless-enable-api-logs)
 
 # Usage
 ```yaml
 ...
 
+custom:
+  stageVariables:
+    thirdPartyEndpoint: http://supercool.endpoint.com/openapi/something
+
+
 plugins:
   - serverless-enable-api-logs
 
 ...
-custom:
-  stageVariables:
-    thirdPartyEndpoint: http://supercool.endpoint.com/openapi/something
 
 functions:
   get:

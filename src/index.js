@@ -57,8 +57,6 @@ module.exports = Class.extend({
       }
     }
 
-    console.log(JSON.stringify(variables));
-
     // find the deployment resource, and add the stage resource
     Object.keys(template.Resources).forEach(function(key){
       if (template.Resources[key]['Type'] == 'AWS::ApiGateway::Deployment') {
