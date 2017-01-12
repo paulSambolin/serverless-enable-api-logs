@@ -21,7 +21,7 @@ module.exports = Class.extend({
     
     var variables = {};
 
-    if (this._serverless.service.custom.stageVariables) {
+    if (this._serverless.service.custom && this._serverless.service.custom.stageVariables) {
       variables = this._serverless.service.custom.stageVariables;
     }
 
