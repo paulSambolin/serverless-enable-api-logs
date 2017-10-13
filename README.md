@@ -1,5 +1,5 @@
 # serverless-enable-api-logs
-Enables Coudwatch logging for API Gateway events
+Enables Cloudwatch logging for API Gateway events
 
 # Resources
 - [Github](https://github.com/paulSambolin/serverless-enable-api-logs)
