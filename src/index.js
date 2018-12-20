@@ -1,6 +1,6 @@
 'use strict';
 
-const _ = require('lodash');
+const merge = require('lodash.merge');
 const Class = require('class.extend');
 
 module.exports = Class.extend({
@@ -63,7 +63,7 @@ module.exports = Class.extend({
         // add stage config
         stageConfig.Properties.DeploymentId = {"Ref":key}
         if (template.Resources.ApiGatewayStage) {
-          _.merge(template.Resources.ApiGatewayStage, stageConfig);
+          merge(template.Resources.ApiGatewayStage, stageConfig);
         } else {
           template.Resources.ApiGatewayStage = stageConfig;
         }
