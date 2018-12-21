@@ -9,6 +9,11 @@ Enables Cloudwatch logging for API Gateway events
 ```yaml
 ...
 
+custom:
+  stageVariables:
+    thirdPartyEndpoint: http://supercool.endpoint.com/openapi/something
+
+
 plugins:
   - serverless-enable-api-logs
 
